@@ -1,0 +1,29 @@
+{
+  "name": "Design-System-Generator",
+  "version": "1.0.0",
+  "description": "Figma Plugin that generates Shadcn UI Design System Variable Collections",
+  "main": "code.js",
+  "scripts": {
+    "build:ui": "node scripts/build-ui.js",
+    "build": "node scripts/build-ui.js && tsc --noEmit && esbuild src/code.ts --bundle --outfile=code.js",
+    "dev": "node scripts/dev-watch.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "push:private": "git push origin main",
+    "push:public": "node scripts/push-public.js",
+    "test": "vitest run",
+    "watch": "esbuild src/code.ts --bundle --outfile=code.js --watch"
+  },
+  "author": "Ariyo Aziz (@ariyoaziz_)",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@figma/eslint-plugin-figma-plugins": "*",
+    "@figma/plugin-typings": "*",
+    "esbuild": "^0.28.1",
+    "eslint": "^9.39.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1",
+    "vitest": "^1.6.0"
+  }
+}
